@@ -1,0 +1,12 @@
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Local exports and backups
+flowpilot-backup-*.json
+flowpilot-*.csv
+# Test artifacts
+coverage/
+playwright-report/
+test-results/

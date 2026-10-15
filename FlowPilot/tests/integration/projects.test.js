@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {projectProgress} from '../../js/utils/calculations.js';
+test('project completion is calculated from linked task records',()=>{const tasks=[{projectId:'a',status:'Completed'},{projectId:'a',status:'Completed'},{projectId:'b',status:'To Do'}];assert.equal(projectProgress({id:'a'},tasks),100);assert.equal(projectProgress({id:'b'},tasks),0);});

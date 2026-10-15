@@ -1,0 +1,11 @@
+pages:
+  stage: deploy
+  script:
+    - mkdir -p public
+    - cp -R index.html 404.html manifest.json css js assets public/
+    - cp README.md LICENSE public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

@@ -1,0 +1,1 @@
+export const logger={info:(message,meta)=>console.info(`[FlowPilot] ${message}`,meta??''),warn:(message,meta)=>console.warn(`[FlowPilot] ${message}`,meta??''),error:(message,meta)=>console.error(`[FlowPilot] ${message}`,meta??'')};

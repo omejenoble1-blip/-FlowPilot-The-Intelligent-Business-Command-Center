@@ -1,0 +1,8 @@
+{
+  "name": "flowpilot-business-command-center",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first FlowPilot static business management application",
+  "scripts": { "test": "node --test tests/unit/*.test.js tests/integration/*.test.js", "check": "node scripts/check-modules.js" }
+}

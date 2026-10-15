@@ -1,0 +1,3 @@
+import { NAV_LABELS } from '../core/constants.js';
+import { initials } from '../utils/formatters.js';
+export function updateHeader(route,profile){document.querySelector('#breadcrumb-current').textContent=NAV_LABELS[route]||'Overview';if(profile){const name=profile.name||'Workspace user';document.querySelector('#profile-name').textContent=name;document.querySelector('#profile-email').textContent=profile.email||'Local profile';document.querySelector('#profile-avatar').textContent=initials(name);document.querySelector('#topbar-initial').textContent=initials(name);document.querySelector('#workspace-name').textContent=profile.workspace||'My workspace';document.querySelector('.workspace-avatar').textContent=initials(profile.workspace||'F');}}

@@ -1,0 +1,3 @@
+import { database } from '../services/database.js';
+export async function updateSidebarCounts(){const [projects,tasks,notes]=await Promise.all([database.getAll('projects'),database.getAll('tasks'),database.getAll('notifications')]);document.querySelector('#nav-project-count').textContent=projects.filter(x=>!x.archived).length;document.querySelector('#nav-task-count').textContent=tasks.filter(x=>x.status!=='Completed').length;const unread=notes.filter(x=>!x.read).length;document.querySelector('#unread-count').textContent=unread;document.querySelector('#notification-dot').classList.toggle('visible',unread>0);}
+export function setActiveNav(route){document.querySelectorAll('[data-route]').forEach(a=>a.classList.toggle('active',a.dataset.route===route));}

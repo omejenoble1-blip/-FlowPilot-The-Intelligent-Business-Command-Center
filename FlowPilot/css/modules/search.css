@@ -1,0 +1,1 @@
+.search-result{display:flex;align-items:center;gap:12px;padding:12px;border-bottom:1px solid var(--border)}.search-result:last-child{border-bottom:0}

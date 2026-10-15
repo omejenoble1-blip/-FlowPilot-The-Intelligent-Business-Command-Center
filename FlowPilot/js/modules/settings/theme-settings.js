@@ -1,0 +1,3 @@
+import { storage } from '../../services/storage-service.js';
+export function applyTheme(theme){const value=theme==='light'?'light':'dark';document.documentElement.dataset.theme=value;document.querySelector('meta[name="theme-color"]')?.setAttribute('content',value==='dark'?'#0b0d12':'#f5f6fa');storage.set('theme',value);const icon=document.querySelector('#theme-toggle');if(icon)icon.innerHTML=`<i data-lucide="${value==='dark'?'sun':'moon'}"></i>`;globalThis.lucide?.createIcons({root:icon||document});return value;}
+export function getInitialTheme(){return storage.get('theme','dark')==='light'?'light':'dark';}

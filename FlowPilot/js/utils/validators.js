@@ -1,0 +1,3 @@
+export function validateRecord(record,fields){const errors={};for(const [key,label,type,required] of fields){const value=record[key];if(required&&(value===undefined||value===null||String(value).trim()===''))errors[key]=`${label} is required.`;if(value!==undefined&&value!==''&&type==='number'&&(!Number.isFinite(Number(value))||Number(value)<0))errors[key]=`${label} must be a valid non-negative number.`;if(value!==undefined&&value!==''&&type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))errors[key]='Enter a valid email address.';}return errors;}
+export function safeNumber(value,fallback=0){const n=Number(value);return Number.isFinite(n)?n:fallback;}
+export function normalizeText(value){return String(value??'').trim();}

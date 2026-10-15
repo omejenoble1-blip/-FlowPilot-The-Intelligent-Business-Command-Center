@@ -1,0 +1,5 @@
+export function sum(items,selector=x=>x){return items.reduce((total,item)=>{const n=Number(selector(item));return total+(Number.isFinite(n)?n:0);},0);}
+export function percent(value,target){const a=Number(value),b=Number(target);if(!Number.isFinite(a)||!Number.isFinite(b)||b<=0)return 0;return Math.max(0,Math.min(100,a/b*100));}
+export function balance(transactions){return sum(transactions.filter(t=>t.type==='Income'),t=>t.amount)-sum(transactions.filter(t=>t.type==='Expense'),t=>t.amount);}
+export function riskScore(probability,impact){return Math.max(1,Math.min(5,Number(probability)||1))*Math.max(1,Math.min(5,Number(impact)||1));}
+export function projectProgress(project,tasks){const related=tasks.filter(t=>t.projectId===project.id);if(related.length)return Math.round(related.filter(t=>t.status==='Completed').length/related.length*100);if(project.progress!==undefined&&project.progress!==''&&Number.isFinite(Number(project.progress)))return Math.max(0,Math.min(100,Number(project.progress)));return 0;}

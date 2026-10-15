@@ -1,11 +1,22 @@
+
 pages:
   stage: deploy
+  image: alpine:latest
   script:
     - mkdir -p public
-    - cp -R index.html 404.html manifest.json css js assets public/
-    - cp README.md LICENSE public/
-  artifacts:
-    paths:
-      - public
+    - cp -r index.html public/
+    - |
+      for dir in css js assets images fonts icons; do
+        if [ -d "$dir" ]; then
+          cp -r "$dir" public/
+        fi
+      done
+    - |
+      if [ ! -s public/index.html ]; then
+        echo "ERROR: index.html is missing or empty."
+        exit 1
+      fi
+  pages:
+    publish: public
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: '$CI_COMMIT_BRANCH == "main"'

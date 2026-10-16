@@ -4,11 +4,11 @@ pages:
   image: alpine:latest
   script:
     - mkdir -p public
-    - cp index.html public/index.html
+    - cp -r index.html public/
     - |
-      for item in css js assets images fonts icons manifest.json 404.html; do
-        if [ -e "$item" ]; then
-          cp -r "$item" public/
+      for dir in css js assets images fonts icons; do
+        if [ -d "$dir" ]; then
+          cp -r "$dir" public/
         fi
       done
     - test -s public/index.html

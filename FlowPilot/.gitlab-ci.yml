@@ -4,19 +4,15 @@ pages:
   image: alpine:latest
   script:
     - mkdir -p public
-    - cp -r index.html public/
+    - cp index.html public/index.html
     - |
-      for dir in css js assets images fonts icons; do
-        if [ -d "$dir" ]; then
-          cp -r "$dir" public/
+      for item in css js assets images fonts icons manifest.json 404.html; do
+        if [ -e "$item" ]; then
+          cp -r "$item" public/
         fi
       done
-    - |
-      if [ ! -s public/index.html ]; then
-        echo "ERROR: index.html is missing or empty."
-        exit 1
-      fi
+    - test -s public/index.html
   pages:
     publish: public
   rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'

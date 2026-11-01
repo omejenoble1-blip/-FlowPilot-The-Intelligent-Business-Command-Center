@@ -1,11 +1,13 @@
+
 pages:
   stage: deploy
+  image: alpine:latest
   script:
     - mkdir -p public
-    - cp -R index.html 404.html manifest.json css js assets public/
-    - cp README.md LICENSE public/
-  artifacts:
-    paths:
-      - public
+    - cp -a index.html 404.html manifest.json css js assets public/
+    - test -s public/index.html
+    - echo "FlowPilot files prepared for GitLab Pages."
+  pages:
+    publish: public
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'

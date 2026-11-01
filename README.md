@@ -1,7 +1,7 @@
 # ✦ FlowPilot — The Intelligent Business Command Center
 
 <p align="center">
-  <img src="docs/screenshots/flowpilot-banner.png" alt="FlowPilot Business Command Center" width="100%">
+  <img src="FlowPilot/docs/screenshots/flowpilot-banner.png" alt="FlowPilot Business Command Center" width="100%">
 </p>
 
 <p align="center">

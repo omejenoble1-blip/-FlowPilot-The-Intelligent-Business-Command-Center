@@ -111,37 +111,49 @@ Explore the FlowPilot interface and its main workspace features.
 
 The central workspace provides an overview of business activities, including project statistics, completed tasks, financial information, task distribution, and upcoming deadlines.
 
-![FlowPilot Dashboard](docs/screenshots/dashboard.png)
+<p align="center">
+  <img src="FlowPilot/docs/screenshots/dashboard.png" alt="FlowPilot Business Command Center" width="100%">
+</p>
 
 ### 2. Compact Dashboard
 
 A compact navigation experience that provides additional workspace flexibility.
 
-![FlowPilot Compact Dashboard](docs/screenshots/dashboard-compact.png)
+<p align="center">
+  <img src="FlowPilot/docs/screenshots/dashboard-compact.png" alt="FlowPilot Business Command Center" width="100%">
+</p>
 
 ### 3. Project Management
 
 Organize projects, monitor progress, search records, apply filters, and manage project information.
 
-![FlowPilot Project Management](docs/screenshots/projects.png)
+<p align="center">
+  <img src="FlowPilot/docs/screenshots/projects.png" alt="FlowPilot Business Command Center" width="100%">
+</p>
 
 ### 4. Project List
 
 View project records and monitor their current progress and status.
 
-![FlowPilot Project List](docs/screenshots/project-list.png)
+<p align="center">
+  <img src="FlowPilot/docs/screenshots/projects.png" alt="FlowPilot Business Command Center" width="100%">
+</p>
 
 ### 5. Finance Transaction Management
 
 Record income and expenses using the transaction management interface.
 
-![FlowPilot Finance Transaction](docs/screenshots/finance-transaction.png)
+<p align="center">
+  <img src="FlowPilot/docs/screenshots/finance-transaction.png" alt="FlowPilot Business Command Center" width="100%">
+</p>
 
 ### 6. Financial Overview
 
 Visualize financial activity and review income and expenses through dashboard charts.
 
-![FlowPilot Financial Analytics](docs/screenshots/financial-analytics.png)
+<p align="center">
+  <img src="FlowPilot/docs/screenshots/financial-analytics.png" alt="FlowPilot Business Command Center" width="100%">
+</p>
 
 ---
 
